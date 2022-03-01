@@ -2,16 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Ready!");
 
     const db = firebase.firestore();
-    const firstName = document.getElementById("firstName");
-    const lastName = document.getElementById("lastName");
+    const userName = document.getElementById("userName");
     const email = document.getElementById("email");
     const password = document.getElementById("password");
     const submit = document.getElementById("submit");
 
     submit.addEventListener("click", function () {
         if (
-            !firstName.value ||
-            !lastName.value ||
+            !userName.value ||
             !email.value ||
             !password.value
         )
@@ -25,17 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 window.location = "dashboard.html"
                 const user = firebase.auth().currentUser;
-                addUser(user.uid, firstName.value, lastName.value);
+                addUser(user.uid, userName.value);
             })
-            .catch((err) => console.log("err", err));
+            .catch((err) => alert(err));
     });
 
-    function addUser(uid, first, last) {
+    function addUser(uid, name) {
         db.collection("Users")
             .doc(uid)
             .set({
-                firstName: first,
-                lastName: last,
+                userName: name,
                 user: uid,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             })

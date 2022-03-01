@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
             .auth()
             .signInWithEmailAndPassword(email.value, password.value)
             .then(function () {
-                window.location = "index.html"
+                window.location = "dashboard.html"
             }).catch(function (err) {
                 alert('Invalid User or password')
             })
     })
     firebase.auth().onAuthStateChanged(function (user) {
-        if (user) window.location = "index.html";
+        if (user) window.location = "dashboard.html";
     });
 })
 
