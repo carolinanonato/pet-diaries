@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css">
+
+    <title>Pet Diaries</title>
+
+</head>
+
+<body>
+    <h1>Welcome to Pet Diaries</h1>
+    <div id="noAuth">
+        <button><a href="register.html">Register</a></button>
+        <button><a href="login.html">Login</a></button>
+    </div>
+    <div id="auth">
+        <button><a href="account.html">Account</a></button>
+        <button><a href="logout.html">Logout</a></button>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDmyj3_8R1eOIWjbEksACJa1rMkCzfhiHY",
+            authDomain: "my-pet-diary-de08e.firebaseapp.com",
+            projectId: "my-pet-diary-de08e",
+            storageBucket: "my-pet-diary-de08e.appspot.com",
+            messagingSenderId: "703782508119",
+            appId: "1:703782508119:web:73f883b6ec47484c4cb512"
+        }
+
+        firebase.initializeApp(firebaseConfig);
+
+
+    </script>
+
+
+</body>
+
+</html>

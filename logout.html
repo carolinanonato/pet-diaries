@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logout.css">
+    <title>Logout</title>
+</head>
+
+<body>
+    <h1>Logout</h1>
+    <p>Change this to the logout screen (mostly likely the Home)</p>
+
+    <nav>
+        <a href="register.html">Register</a> |
+        <a href="login.html">Login</a>
+    </nav>
+
+    <script src="logout.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDmyj3_8R1eOIWjbEksACJa1rMkCzfhiHY",
+            authDomain: "my-pet-diary-de08e.firebaseapp.com",
+            projectId: "my-pet-diary-de08e",
+            storageBucket: "my-pet-diary-de08e.appspot.com",
+            messagingSenderId: "703782508119",
+            appId: "1:703782508119:web:73f883b6ec47484c4cb512"
+        }
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+</body>
+
+</html>
