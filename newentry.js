@@ -4,6 +4,8 @@ function upload() {
 
     var post = document.getElementById('post').value;
 
+    var title = document.getElementById('title').value;
+
     var imageName = image.name;
 
     var storageRef = firebase.storage().ref('images/' + imageName);
@@ -23,6 +25,7 @@ function upload() {
 
             firebase.database().ref('my-pet-diary/').push().set({
                 text: post,
+                title: title,
                 imageURL: downloadURL
             }, function (error) {
                 if (error) {
@@ -58,7 +61,7 @@ function getdata() {
             posts_div.innerHTML = "<div class='col-sm-4 mt-2 mb-1'>" +
                 "<div class='card'>" +
                 "<img src='" + value.imageURL + "' style='height:250px;'>" +
-                "<div class='card-body'><p class='card-text'>" + value.text + "</p>" +
+                "<div class='card-body'><h2 class='card-title'>" + value.title + "</h2><p class='card-text'>" + value.text + "</p>" +
                 "<button class='btn btn-danger' id='" + key + "' onclick='delete_post(this.id)'>Delete</button>" +
                 "</div></div></div>" + posts_div.innerHTML;
         }
@@ -71,3 +74,4 @@ function delete_post(key) {
     getdata();
 
 }
+"<h2 class='card-title'>" + value.title + "</h2>"
