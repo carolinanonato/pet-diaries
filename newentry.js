@@ -67,7 +67,7 @@ function getdata() {
 }
 
 function delete_post(key) {
-    firebase.database().ref('blogs/' + key).remove();
+    firebase.database().ref('my-pet-diary/' + key).remove();
     getdata();
 
 }
