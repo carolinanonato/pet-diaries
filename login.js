@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log('ready')
+
 
     const email = document.getElementById("email")
     const password = document.getElementById("password")

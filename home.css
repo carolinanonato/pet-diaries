@@ -16,7 +16,7 @@
     font-family: 'Secular One', sans-serif;
     font-size: 70px;
     text-align: center;
-    color: rgb(91, 171, 241)
+    color: rgb(235, 141, 53);
 
 
 }
@@ -41,6 +41,10 @@ button {
     padding: 10px 20px;
     border: none;
     }
+
+button:active {
+    transform: translateY(4px);
+}
 
     a {
         color: rgb(255, 255, 255);
