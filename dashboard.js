@@ -58,11 +58,13 @@ function getdata() {
         console.log(data);
 
         for (let [key, value] of Object.entries(data)) {
-            posts_div.innerHTML = "<div class='col-sm-4 mt-2 mb-1'>" +
+            posts_div.innerHTML = "<div>" +
                 "<div class='card'>" +
-                "<img src='" + value.imageURL + "' style='height:250px;'>" +
+
                 "<div class='card-body'><h2 class='card-title'>" + value.title + "</h2><p class='card-text'>" + value.text + "</p>" +
-                "<button class='btn btn-danger' id='" + key + "' onclick='delete_post(this.id)'>Delete</button>" +
+                "<img src='" + value.imageURL + "' style='height:250px;'>" +
+
+                "<br><button class='btn btn-danger' id='" + key + "' onclick='delete_post(this.id)'>🗑️</button>" +
                 "</div></div></div>" + posts_div.innerHTML;
         }
 
