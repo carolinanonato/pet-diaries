@@ -5,46 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dashboard.css">
-    <title>Document</title>
+
+
+    <title>New diary entry</title>
 </head>
 
 <body>
     <nav>
-        <h1>My Pet Diary</h1>
-        <button>Log out</button>
+        <h1 class="title">My Pet Diary</h1>
+        <button class="logout"> <a class="logout" href="login.html">Log Out</a></button>
     </nav>
 
-    <div class="main">
-        <div class="dashboard">
-            <h2>Diary</h2>
-            <p>Day 1</p>
+    <div class="container mt-2">
+
+        <div class="card">
+            <div class="card-body">
+                <form id="post-form">
+
+                    <h3 class="newentry">New Diary Entry</h3>
+                    <textarea id="title" class="form-title" placeholder="Choose a title"></textarea>
+                    <textarea id="post" class="form-control form-text"
+                        placeholder="Start making memories..."></textarea>
+                    <input type="file" class="form-control" id="image" accept="images/*">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                    </div>
+
+                </form>
+            </div>
+
         </div>
-        <div class="entry">
-            <h1 class="new-entry">New Entry</h1>
-            <span> <a href="newentry.html">+</a> </span>
-        </div>
+        <section class="open-book">
 
-        <script src="dashboard.js"></script>
+            <div class="row mt-4" id="posts">
 
+        </section>
+    </div>
 
-        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
-
-        <script>
-            const firebaseConfig = {
-                apiKey: "AIzaSyDmyj3_8R1eOIWjbEksACJa1rMkCzfhiHY",
-                authDomain: "my-pet-diary-de08e.firebaseapp.com",
-                projectId: "my-pet-diary-de08e",
-                storageBucket: "my-pet-diary-de08e.appspot.com",
-                messagingSenderId: "703782508119",
-                appId: "1:703782508119:web:73f883b6ec47484c4cb512"
-            }
-
-            firebase.initializeApp(firebaseConfig);
+    </div>
 
 
-        </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDmyj3_8R1eOIWjbEksACJa1rMkCzfhiHY",
+            authDomain: "my-pet-diary-de08e.firebaseapp.com",
+            projectId: "my-pet-diary-de08e",
+            storageBucket: "my-pet-diary-de08e.appspot.com",
+            messagingSenderId: "703782508119",
+            appId: "1:703782508119:web:73f883b6ec47484c4cb512"
+        }
+
+        firebase.initializeApp(firebaseConfig);
+
+
+    </script>
+
+
+    <script src="dashboard.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

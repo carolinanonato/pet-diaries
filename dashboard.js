@@ -74,4 +74,3 @@ function delete_post(key) {
     getdata();
 
 }
-"<h2 class='card-title'>" + value.title + "</h2>"
