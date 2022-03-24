@@ -1,6 +1,11 @@
-# todo:
-1. logout page DONE
-2. functionality: individual dashboards !important
-3. improve dashboard book style 
-4. refactoring >  bundle files in folders  DONE
+# Pet Diaries
 
+This is a small web application made using vanilla Javascript and Firebase Authentication.
+
+### Features
+
+- Register
+- Log in/ Log out
+- Diary Dashboard
+- Text + picture upload
+- Text + picture delete
